@@ -1,6 +1,8 @@
-NAME = Phonebook
+NAME = Zombie
 
-SRCS = Phonebook.cpp
+SRCS = 	main.cpp \
+		Zombie.cpp \
+
 
 CC = c++
 
