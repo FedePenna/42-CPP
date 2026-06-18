@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fepennar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/18 17:53:30 by fepennar          #+#    #+#             */
+/*   Updated: 2026/06/18 17:53:32 by fepennar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.hpp"
 #include "Phonebook.hpp"
 
@@ -9,6 +21,8 @@ int main()
         std::string command;
         std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
         std::getline(std::cin, command);
+        if (std::cin.eof())
+            break ;
         if (command == "ADD")
         {
             phonebook.create_contact();

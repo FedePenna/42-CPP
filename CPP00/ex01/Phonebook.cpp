@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fepennar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/18 17:54:09 by fepennar          #+#    #+#             */
+/*   Updated: 2026/06/18 17:54:11 by fepennar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Phonebook.hpp"
 
 Phonebook::Phonebook()
@@ -78,6 +90,7 @@ void Phonebook::create_contact()
     if (input.empty())
     {
         std::cout << "First name cannot be empty. Contact creation aborted." << std::endl;
+        return ;
     }
     new_contact.set_first_name(input);
     std::cout << "Enter last name: ";
@@ -99,9 +112,9 @@ void Phonebook::create_contact()
 
     std::cout << "Enter phone number: ";
     std::getline(std::cin, input);
-    if (input.empty())
+    if (input.empty() || input.find_first_not_of("0123456789") != std::string::npos)
     {
-        std::cout << "Phone number cannot be empty. Contact creation aborted." << std::endl;
+        std::cout << "Phone number cannot be empty and must contain only digits. Contact creation aborted." << std::endl;
         return;
     }
     new_contact.set_phone_number(input);
