@@ -1,11 +1,11 @@
 OBJS_DIR	=	obj/
 
 
-SRCS = newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
+SRCS = main.cpp
 
 OBJS		= $(addprefix $(OBJS_DIR), $(SRCS:.cpp=.o))
 
-NAME = Zombie
+NAME = BRAIN
 
 CC = c++
 

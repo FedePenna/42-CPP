@@ -2,18 +2,12 @@
 
 int main()
 {
-    Zombie *zombie1 = new Zombie("San Pancrazio");
-    zombie1->announce();
-    delete zombie1;
+    Zombie *zombiehorde = zombieHorde(5, "San Pancrazio");
+    for (int i = 0; i < 5; i++)
+    {
+        zombiehorde[i].announce();
+    }
 
-    Zombie zombie2("Zombie2");
-    zombie2.announce();
-
-    Zombie *zombie3 = zombie2.newZombie("Zombie3");
-    zombie3->announce();
-    delete zombie3;
-
-    zombie2.randomChump("Zombie4");
-
+    delete[] zombiehorde;
     return 0;
 }
