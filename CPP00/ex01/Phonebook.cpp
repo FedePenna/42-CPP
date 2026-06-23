@@ -87,7 +87,7 @@ void Phonebook::create_contact()
 
     std::cout << "Enter first name: ";
     std::getline(std::cin, input);
-    if (input.empty())
+    if (input.empty() or input.find_first_not_of(" \t\n\v\f\r") == std::string::npos)
     {
         std::cout << "First name cannot be empty. Contact creation aborted." << std::endl;
         return ;
@@ -95,7 +95,7 @@ void Phonebook::create_contact()
     new_contact.set_first_name(input);
     std::cout << "Enter last name: ";
     std::getline(std::cin, input);
-    if (input.empty())
+    if (input.empty() or input.find_first_not_of(" \t\n\v\f\r") == std::string::npos)
     {
         std::cout << "Last name cannot be empty. Contact creation aborted." << std::endl;
         return;
@@ -103,7 +103,7 @@ void Phonebook::create_contact()
     new_contact.set_last_name(input);
     std::cout << "Enter nickname: ";
     std::getline(std::cin, input);
-    if (input.empty())
+    if (input.empty() or input.find_first_not_of(" \t\n\v\f\r") == std::string::npos)
     {
         std::cout << "Nickname cannot be empty. Contact creation aborted." << std::endl;
         return;
