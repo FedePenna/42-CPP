@@ -1,7 +1,7 @@
 OBJS_DIR	=	obj/
 
 
-SRCS = main.cpp weapon.cpp human.cpp
+SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJS		= $(addprefix $(OBJS_DIR), $(SRCS:.cpp=.o))
 
