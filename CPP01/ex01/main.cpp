@@ -2,12 +2,13 @@
 
 int main()
 {
-    Zombie *zombiehorde = zombieHorde(5, "San Pancrazio");
-    for (int i = 0; i < 5; i++)
+    int N = 8;
+    
+    Zombie *zombiehorde = zombieHorde(N, "San Pancrazio");
+    for (int i = 0; i < N; i++)
     {
         zombiehorde[i].announce();
     }
-
     delete[] zombiehorde;
-    return 0;
+    return (0);
 }
