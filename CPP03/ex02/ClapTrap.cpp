@@ -67,10 +67,7 @@ void ClapTrap::takeDamage(unsigned int amount)
     else
     {
         if (amount > _hitPoints)
-        {    
             _hitPoints = 0;
-            std::cout << " You really should level up if you get one tapped..." << std::endl;
-        }
         else
             _hitPoints -= amount;
         std::cout << _name << " takes " << amount << " points of damage!" << std::endl;
@@ -81,15 +78,12 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if (_hitPoints == 0)
-        std::cout << _name << " has died and cannot be repaired!" << std::endl;
-    else if (_energyPoints == 0)
+    if (_energyPoints == 0)
         std::cout << _name << " has no energy left to heal! Dagger has died..." << std::endl;
     else
     {
         _energyPoints--;
         _hitPoints += amount;
         std::cout << _name << " is healed for " << amount << " health! thank you Dagger!" << std::endl;
-        std::cout << _name << " now has " << _hitPoints << " health!" << std::endl;
     }
 }
