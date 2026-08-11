@@ -28,17 +28,17 @@ FragTrap &FragTrap::operator=(const FragTrap &other)
 void FragTrap::attack(const std::string &target)
 {
     if (_energyPoints == 0)
-        std::cout << _name << " has no energy left to attack! Pity..." << std::endl;
+        std::cout << "FragTrap " << _name << " has no energy left to attack! Pity..." << std::endl;
     else if (_hitPoints == 0)
-        std::cout << _name << " has died..." << std::endl;
+        std::cout << "FragTrap " << _name << " has died..." << std::endl;
     else
     {
         _energyPoints--;
-        std::cout << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
+        std::cout << "FragTrap " << _name << " combines Vivi's Firaga with his sword to attack " << target << ", causing " << _attackDamage << " points of damage!, Impressive!" << std::endl;
     }
 }
 
 void FragTrap::highFivesGuys()
 {
-    std::cout << _name << " is requesting a high five!" << std::endl;
+    std::cout << "FragTrap " << _name << " is requesting a high five!" << std::endl;
 }

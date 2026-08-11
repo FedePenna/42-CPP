@@ -2,10 +2,14 @@
 
 int main(void)
 {
-    ScavTrap Vivi ("Vivi");
+    ClapTrap Vivi ("Vivi");
+    ScavTrap Zidane ("Zidane");
     Vivi.attack("Black Waltz 3");
+    Zidane.attack("Kuja");
     Vivi.takeDamage(5);
     Vivi.beRepaired(3);
-    Vivi.guardGate();
+    Zidane.guardGate();
+    Zidane.takeDamage(10);
+    Zidane.beRepaired(5);
     return 0;
 }
