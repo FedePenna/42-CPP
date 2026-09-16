@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <ostream>
 #include <string>
@@ -5,11 +6,11 @@
 class Bureaucrat
 {
     private:
-        std::string _name;
+        const std::string _name;
         int _grade;
     public:
         Bureaucrat(void);
-        Bureaucrat(const std::string name, unsigned int grade);
+        Bureaucrat(const std::string name, int grade);
         Bureaucrat(const Bureaucrat& other);
         Bureaucrat &operator=(const Bureaucrat &other);
         ~Bureaucrat();
@@ -30,7 +31,7 @@ class Bureaucrat
             }
     };
     std::string getName(void) const;
-    unsigned int getGrade(void) const;
+    int getGrade(void) const;
     void incrementGrade(void);
     void decrementGrade(void);
 

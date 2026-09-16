@@ -1,15 +1,13 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main(void)
 {
-    try
-    {
-        Bureaucrat bureaucrat("John Burocrate", 200);
-        std::cout << bureaucrat << std::endl;
-    }
-    catch (const std::exception &e)
-    {
-        std::cerr << "Exception: " << e.what() << std::endl;
-    }
+    Bureaucrat bureaucrat("John Burocrate", 32);
+    bureaucrat.incrementGrade();
+    Form contratto("Ercontratto", 30, 20);
+    bureaucrat.signForm(contratto);
+    bureaucrat.incrementGrade();
+    bureaucrat.signForm(contratto);
     return 0;
 }
